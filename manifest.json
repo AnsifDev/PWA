@@ -3,6 +3,7 @@
 "background_color" : "black",
 "theme_color" : "#00ffff",
 "display" : "standalone",
+"prefer_related_application": false,
 "start_url" : "/MainActivity.html",
 "icons" : [{
 "src": "https://ansifdev.github.io/MyWeb/img512.png",
