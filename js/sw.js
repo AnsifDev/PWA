@@ -4,9 +4,9 @@ self.addEventListener("install", e=>{
 	}));
 });
 
-self.addEventListener("fetch", function (e){
-	e.respondWith(caches.match(e.request).then(function (req){
-		if (req) { return req; }
-        else { return fetch(e.request); }
+self.addEventListener("fetch", e=>{
+	e.respondWith(caches.match(e.request).then(req=>{
+             if (req) { return req; }
+             else { return fetch(e.request); }
 	}));
 });
