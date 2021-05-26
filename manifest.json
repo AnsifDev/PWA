@@ -1,0 +1,12 @@
+{ "name" : "GigaTech Progressive Web Application",
+"short_name" : "GigaTech PWA",
+"background_color" : "black",
+"theme_color" : "#00ffff",
+"display" : "standalone",
+"start_url" : "/MainActivity.html",
+"icons" : [{
+"src": "https://ansifdev.github.io/MyWeb/img512.png",
+"type": "image/png",
+"sizes": "512x512"
+}]
+}
