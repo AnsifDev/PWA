@@ -10,7 +10,8 @@ self.addEventListener("install", function (e){
 });
 
 self.addEventListener("fetch", function (e){
-	e.respondWith(caches.match(e.request).then(function (res){
-		return res || fetch(e.request);
+	e.respondWith(caches.match(e.request).then(function (req){
+		if (req) { return req; }
+        else { return fetch(e.request); }
 	}));
 });
