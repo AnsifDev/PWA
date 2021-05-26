@@ -1,11 +1,6 @@
-self.addEventListener("install", function (e){
-	e.waitUtil(caches.open("static").then(function (cache){
-		return cache.addAll([
-                "./index.html",
-		"./MainActivity.html",
-		"./css/styles.css",
-		"./js/swLoader.js",
-		"https://ansifdev.github.io/MyWeb/img512.png"]);
+self.addEventListener("install", e=>{
+	e.waitUtil(caches.open("static").then(catch=>{
+		return cache.addAll(["./index.html", "./MainActivity.html", "./css/styles.css", "./js/swLoader.js", "https://ansifdev.github.io/MyWeb/img512.png"]);
 	}));
 });
 
