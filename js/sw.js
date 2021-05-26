@@ -1,6 +1,7 @@
 self.addEventListener("install", function (e){
 	e.waitUtil(caches.open("static").then(function (cache){
 		return cache.addAll([
+                "./index.html",
 		"./MainActivity.html",
 		"./css/styles.css",
 		"./js/swLoader.js",
