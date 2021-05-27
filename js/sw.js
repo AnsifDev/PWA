@@ -2,7 +2,7 @@ self.addEventListener("install", function(e){
   e.waitUntil(caches.open("static")
     .then(function(c){
       c.addAll(['../index.html', 'swLoader.js', '../MainActivity.html']);
-      console.log("Error occured"+err);
+      console.log("Everything perfect");
     })
     .catch(function(err){
       console.log("Error occured"+err);
