@@ -1,17 +1,19 @@
-{ "name" : "GigaTech Progressive Web Application",
-"short_name" : "GigaTech PWA",
-"background_color" : "black",
-"theme_color" : "#00ffff",
-"display" : "standalone",
-"prefer_related_application": false,
-"start_url" : "/MainActivity.html",
-"icons" : [{
-"src": "https://ansifdev.github.io/MyWeb/img512.png",
-"type": "image/png",
-"sizes": "512x512"
-},{
-"src": "https://ansifdev.github.io/MyWeb/img64.png",
-"type": "image/png",
-"sizes": "64x64"
-}]
+{
+  "name" : "GigaTech Progressive Web Application",
+  "short_name" : "GigaTech PWA",
+  "background_color" : "black",
+  "theme_color" : "#00ffff",
+  "display" : "standalone",
+  "prefer_related_application": false,
+  "start_url" : "/MainActivity.html",
+  "scope": "/",
+  "icons" : [{
+    "src": "https://ansifdev.github.io/MyWeb/img512.png",
+    "type": "image/png",
+    "sizes": "512x512"
+  },{
+    "src": "https://ansifdev.github.io/MyWeb/img64.png",
+    "type": "image/png",
+    "sizes": "64x64"
+  }]
 }
