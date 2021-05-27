@@ -9,16 +9,16 @@ self.addEventListener("install", function(e){
   );
 });
 
-self.addEventListener('fetch', (event) => {
+self.addEventListener('fetch', function(e) {
     console.log("Fetch request received");
-    event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
+    e.respondWith(
+    caches.match(e.request).then(function(cachedResponse) {
       if (cachedResponse) {
         console.log("Returned cache data");
         return cachedResponse;
       }
       console.log("loading from server");
       return fetch(event.request);
-    })
+    });
   );
 });
