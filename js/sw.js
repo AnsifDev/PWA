@@ -1,7 +1,7 @@
 self.addEventListener("install", e=>{
     alert("ServiceWorker first load suceeded");
     e.waitUntil(caches.open("static").then(cache=>{
-        return cache.addAll(["./MainActivity.html", "./index.html"]);
+        return cache.addAll(["/MainActivity.html", "/index.html"]);
     }))
 })
 self.addEventListener("fetch", e=>{
