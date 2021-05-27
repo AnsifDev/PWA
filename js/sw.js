@@ -6,9 +6,9 @@ self.addEventListener("install", function(e){
     })
     .catch(function(err){
       console.log("Error occured"+err);
-    });
+    })
   )
-});
+})
 
 self.addEventListener('fetch', function(e) {
     console.log("Fetch request received");
@@ -20,6 +20,6 @@ self.addEventListener('fetch', function(e) {
       }
       console.log("loading from server");
       return fetch(event.request);
-    });
-  );
-});
+    })
+  )
+})
