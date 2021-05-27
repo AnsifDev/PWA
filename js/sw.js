@@ -6,7 +6,8 @@ self.addEventListener("install", function(e){
     })
     .catch(function(err){
       console.log("Error occured"+err);
-  });
+    });
+  )
 });
 
 self.addEventListener('fetch', function(e) {
