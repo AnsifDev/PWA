@@ -1,7 +1,7 @@
 self.addEventListener("install", function(e){
   e.waitUntil(caches.open("static")
     .then(function(c){
-      c.addAll(['/PWA/index.html', '/PWA/js/swLoader.js', '/PWA/MainActivity.html']);
+      c.addAll(['../index.html', 'swLoader.js', '../MainActivity.html']);
       console.log("Error occured"+err);
     })
     .catch(function(err){
