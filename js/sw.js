@@ -1,12 +1,12 @@
 self.addEventListener("install", e=>{
-	e.waitUtil(caches.open("static").then(catch=>{
-		return cache.addAll(["./index.html", "./MainActivity.html", "./css/styles.css", "./js/swLoader.js", "https://ansifdev.github.io/MyWeb/img512.png"]);
-	}))
+    alert("ServiceWorker first load suceeded");
+    e.waitUntil(caches.open("static").then(cache=>{
+        return cache.addAll(["./MainActivity.html", "./js/swLoader.js", "./css/styles.css"./index.html"]);
+    }))
 })
-
 self.addEventListener("fetch", e=>{
-	e.respondWith(caches.match(e.request).then(req=>{
-             if (req) { return req; }
-             else { return fetch(e.request); }
-	}))
+    e.respondWith(caches.match(e.request).then(req=>{
+        if (req) { return req; }
+        else { return fetch(e.request); }
+    }))
 })
