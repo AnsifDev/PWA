@@ -1,8 +1,9 @@
 if ("serviceWorker" in navigator){
 	navigator.serviceWorker.register("serviceWorker.js")
 	.then(function (e){
-		alert("Response Done");
+		console.log("ServiceWorker registered");
 	}).catch(function (e){
-		alert("Response failed"+e);
+		console.log("ServiceWorker registeration failed");
+		console.log("e");
 	});
 }
