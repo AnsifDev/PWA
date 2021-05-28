@@ -5,7 +5,7 @@
   "theme_color" : "#00ffff",
   "display" : "standalone",
   "prefer_related_application": false,
-  "start_url" : "./MainActivity.html",
+  "start_url" : "html/MainActivity.html",
   "icons" : [{
     "src": "https://ansifdev.github.io/MyWeb/img512.png",
     "type": "image/png",
