@@ -1,8 +1,8 @@
 self.addEventListener("install", function(e){
   e.waitUntil(caches.open("static")
-    .then(async function(c){
-      return c.addAll(['index.html', 'js/index.js', 'html/MainActivity.html']);
+    .then(function(c){
       console.log("Everything perfect");
+      return c.addAll(["index.html", "js/index.js", "html/MainActivity.html"]);
     })
     .catch(function(err){
       console.log("Error occured"+err);
@@ -13,7 +13,7 @@ self.addEventListener("install", function(e){
 self.addEventListener('fetch', function(e) {
     console.log("Fetch request received");
     e.respondWith(
-    caches.match(e.request).then(async function(cachedResponse) {
+    caches.match(e.request).then(function(cachedResponse) {
       if (cachedResponse) {
         console.log("Returned cache data");
         return cachedResponse;
