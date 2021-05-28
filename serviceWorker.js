@@ -13,7 +13,7 @@ self.addEventListener("install", function(e){
 self.addEventListener('fetch', function(e) {
     console.log("Fetch request received");
     e.respondWith(
-    caches.match(e.request).then(function(cachedResponse) {
+    caches.match(e.request).then(async function(cachedResponse) {
       if (cachedResponse) {
         console.log("Returned cache data");
         return cachedResponse;
