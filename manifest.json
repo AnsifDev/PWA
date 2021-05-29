@@ -6,6 +6,7 @@
   "display" : "standalone",
   "prefer_related_application": false,
   "start_url" : "./html/MainActivity.html",
+  "scope": "./"
   "icons" : [{
     "src": "https://ansifdev.github.io/MyWeb/img512.png",
     "type": "image/png",
