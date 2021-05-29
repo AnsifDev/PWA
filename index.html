@@ -23,13 +23,18 @@
 
     <h1>My PWA 3</h1>
     <script>
+      let pr;
       window.addEventListener("beforeinstallprompt", function(event){
         event.preventDefault();
-        event.prompt();
+        pr = event;
       })
+      function btnclick(){
+        pr.prompt();
+      }
     </script>
     <p>This is my first website</p>
 	<script src="js/index.js"></script>
+	<button onclick="btnclick()">popup</button>
 
   </body>
 </html>		
