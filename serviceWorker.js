@@ -15,10 +15,10 @@ self.addEventListener("fetch", function(e) {
     e.respondWith(
     caches.match(e.request).then(function(res){
 	if (res) {
-	     console.log("Returned cache data");
-	     return res;
-        }
+	  console.log("Returned cache data");
+	  return res;
+  }
 	console.log("loading from server");
 	return fetch(e.request);
-    }));
+  }));
 })
