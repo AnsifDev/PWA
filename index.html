@@ -22,7 +22,11 @@
   <body>
 
     <h1>My PWA 3</h1>
-
+    <script>
+      window.addEventListener("beforeinstallprompt", function(event){
+        event.prompt();
+      })
+    </script>
     <p>This is my first website</p>
 	<script src="js/index.js"></script>
 
