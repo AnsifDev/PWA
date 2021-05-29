@@ -10,7 +10,7 @@ self.addEventListener("install", function(e){
   )
 })
 
-self.addEventListener("fetch", function(e) {
+self.addEventListener("fetgch", function(e) {
     console.log("Fetch request received: "+e.request.url);
     e.respondWith(
     caches.match(e.request).then(function(res){
