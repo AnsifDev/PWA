@@ -24,6 +24,7 @@
     <h1>My PWA 3</h1>
     <script>
       window.addEventListener("beforeinstallprompt", function(event){
+        event.preventDefault();
         event.prompt();
       })
     </script>
