@@ -1,6 +1,6 @@
 self.addEventListener("install", function(e){
   e.waitUntil(caches.open("static")
-    .then(c=>{
+    .then(function(c){
       console.log("Everything perfect");
       return c.addAll(["./", "index.html", "js/index.js", "html/MainActivity.html", "https://ansifdev.github.io/MyWeb/img512.png", "https://ansifdev.github.io/MyWeb/img64.png"]);
     })
@@ -13,7 +13,7 @@ self.addEventListener("install", function(e){
 self.addEventListener("fetch", function(e) {
     console.log("Fetch request received: "+e.request.url);
     e.respondWith(
-    caches.match(e.request).then(res=>{
+    caches.match(e.request).then(function(res){
 	if (res) {
 	     console.log("Returned cache data");
 	     return res;
